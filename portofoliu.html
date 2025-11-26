@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+	<title>Diverse Schite</title>
+	<link rel="stylesheet" href="styleTadaoAndo.css"> 
+    
+    <script src="theme.js"></script>
+    
+    <script src="auth.js"></script>
+</head>
+<body>
+	<header>
+		<h1>Diverse Schite</h1>
+	</header>
+	<main>
+		<section class="Sectiune"> 
+			<h2 class="Sectiune-Titlu">Schite</h2>
+			<div class="Poze">
+				<figure>
+					<img src="img8.jpg" alt="Schiță arhitecturală 1" class="Loc-Poza">
+				</figure>
+				<figure>
+					<img src="img9.jpg" alt="Schiță arhitecturală 2" class="Loc-Poza">
+				</figure>
+				<figure>
+					<img src="img13.jpg" alt="Schiță arhitecturală 3" class="Loc-Poza">
+				</figure>
+				<figure>
+					<img src="img18.jpg" alt="Schiță arhitecturală 4" class="Loc-Poza">
+				</figure>
+				<figure>
+					<img src="img100.jpg" alt="Schiță arhitecturală 5" class="Loc-Poza">
+				</figure>
+				<figure>
+					<img src="img1000.jpg" alt="Schiță arhitecturală 6" class="Loc-Poza">
+				</figure>
+			</div>
+		</section>
+
+        <section class="Sectiune">
+            <h2 class="Sectiune-Titlu">Adaugă Comentariul Tău</h2>
+            <button id="show-form-btn" class="Inapoi">Lasă un comentariu</button>
+            
+            <form id="comment-form" style="display:none; margin-top: 2rem;">
+                <div>
+                    <label for="user-email">Email:</label>
+                    <input type="email" id="user-email" required>
+                </div>
+                <div style="margin-top: 1rem;">
+                    <label for="user-comment">Comentariu:</label>
+                    <textarea id="user-comment" rows="4" style="width:100%;"></textarea>
+                </div>
+                
+                <div style="margin-top: 1rem;">
+                    <label for="user-rating">Rating (1-10):</label>
+                    <input type="range" id="user-rating" min="1" max="10" value="5" style="width:100%;">
+                    <span id="rating-value">5</span>
+                </div>
+                
+                <button type="submit" class="Inapoi" style="margin-top: 1rem;">Trimite</button>
+            </form>
+            
+            <div id="comments-container" style="margin-top: 2rem;"></div>
+        </section>
+	</main>
+	<footer>
+		<div>
+            <div class="Coloana-Dreapta">
+			    <a href="index.html" class="Inapoi">← Înapoi la Meniu</a>
+                <div class="Submeniu">
+                    <a href="TadaoAndo.html" class="Inapoi">Tadao Ando</a>
+                    <div class="Submeniu-links">
+                        <a href="factsTadao.html" class="Inapoi-sub">Facts</a>
+                        <a href="istorieTadao.html" class="Inapoi-sub">Istorie</a>
+                    </div>
+                </div>
+                <div class="Submeniu">
+                    <a href="ZahaHadid.html" class="Inapoi">Zaha Hadid</a>
+                    <div class="Submeniu-links">
+                        <a href="factsZaha.html" class="Inapoi-sub">Facts</a>
+                        <a href="istorieZaha.html" class="Inapoi-sub">Istorie</a>
+                    </div>
+                </div>
+                <div class="Submeniu">
+                    <a href="AntoniGaudi.html" class="Inapoi">Antoni Gaudi</a>
+                    <div class="Submeniu-links">
+                        <a href="factsGaudi.html" class="Inapoi-sub">Facts</a>
+                        <a href="istorieGaudi.html" class="Inapoi-sub">Istorie</a>
+                    </div>
+                </div>
+            </div>
+		</div>
+	</footer>
+
+    <script src="script.js" defer></script>
+</body>
+</html>

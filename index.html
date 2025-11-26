@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="styleProiect.css"> 
+	<script src="theme.js"></script>
+    <script src="auth.js"></script>
+    <title>Proiect</title>
+</head>
+<body>
+	
+    <a href="login.html" class="login-cerc">
+        <span>Login</span>
+    </a>
+
+    <div class="Continut">
+		<div class="Coloana"></div>
+		<div class="Coloana"></div>
+		<div class="Coloana"></div>
+		<div class="Coloana"></div>
+		<div class="Coloana"></div>
+		<div class="Coloana"></div>
+		<div class="Coloana"></div>
+		<div class="Coloana"></div>
+		<div class="Coloana"></div>
+		<div class="Coloana"></div>
+		<div class="alb linie-orizontala linie-1"></div>
+		<div class="alb linie-orizontala linie-2"></div>
+		<div class="alb linie-orizontala linie-3"></div>
+		<div class="alb linie-orizontala linie-4"></div>
+		<div class="alb linie-verticala  linie-5"></div>
+		<div class="alb linie-verticala  linie-6"></div>
+		<div class="alb linie-verticala  linie-7"></div>
+		<div class="alb linie-verticala  linie-8"></div>
+		<div class="forma forma-1"></div>
+		<div class="forma forma-2"></div>
+		<div class="forma forma-3"></div>
+		<div class="forma forma-4"></div>
+		<div class="forma forma-5"></div>
+		
+        <div class="Meniu" id="meniu-principal">
+			<div class="Cerc-Principal">
+				<span class="Text-Cerc">Meniu</span>
+			</div>
+			
+            <div class="cerc-container cerc-container-1">
+                <a href="TadaoAndo.html" class="cerc-mic cerc-1">Tadao Ando</a>
+                <a href="factsTadao.html" class="cerc-mic cerc-sub sub-cerc-1-1">Facts</a>
+                <a href="istorieTadao.html" class="cerc-mic cerc-sub sub-cerc-1-2">Istorie</a>
+            </div>
+
+            <div class="cerc-container cerc-container-2">
+                <a href="ZahaHadid.html" class="cerc-mic cerc-2">Zaha Hadid</a>
+                <a href="factsZaha.html" class="cerc-mic cerc-sub sub-cerc-2-1">Facts</a>
+                <a href="istorieZaha.html" class="cerc-mic cerc-sub sub-cerc-2-2">Istorie</a>
+            </div>
+            
+            <div class="cerc-container cerc-container-3">
+                <a href="AntoniGaudi.html" class="cerc-mic cerc-3">Antoni Gaudi</a>
+                <a href="factsGaudi.html" class="cerc-mic cerc-sub sub-cerc-3-1">Facts</a>
+                <a href="istorieGaudi.html" class="cerc-mic cerc-sub sub-cerc-3-2">Istorie</a>
+            </div>
+
+            <a href="portofoliu.html" class="cerc-mic cerc-4">Diverse Schite</a>
+		</div>
+
+	    <h1 class="title">The Art of Architecture</h1>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const loginCerc = document.querySelector('.login-cerc');
+            const loggedInUser = localStorage.getItem('loggedInUser');
+
+            if (loggedInUser) {
+                loginCerc.querySelector('span').textContent = 'Logout';
+                loginCerc.href = '#'; 
+                
+                loginCerc.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    localStorage.removeItem('loggedInUser');
+                    window.location.reload();
+                });
+            }
+
+            const meniu = document.getElementById('meniu-principal');
+            const cercPrincipal = meniu.querySelector('.Cerc-Principal');
+
+            cercPrincipal.addEventListener('click', (e) => {
+                e.stopPropagation();
+                meniu.classList.toggle('active');
+            });
+
+            document.addEventListener('click', () => {
+                meniu.classList.remove('active');
+            });
+        });
+    </script>
+</body>
+</html>

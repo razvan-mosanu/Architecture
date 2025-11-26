@@ -1,0 +1,502 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%;
+    font-family: 'Arial', sans-serif;
+    background: #f8f9fa;
+    color: #333;
+    transition: background 0.3s, color 0.3s;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 3.75rem;
+    padding: 5rem 1.25rem 2.5rem;
+    background: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 0.7rem 1rem rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+header h1 {
+    font-size: 3.5rem;
+    font-weight: 300;
+    letter-spacing: 0.5rem;
+    color: #333;
+    margin-bottom: 1.25rem;
+    text-transform: uppercase;
+    transition: color 0.5s ease;
+}
+
+header p {
+    font-size: 1.2rem;
+    font-weight: 300;
+    color: #666;
+    letter-spacing: 0.25rem;
+}
+
+main {
+    max-width: 75rem;
+    margin: 0 auto;
+    padding: 0 1.25rem;
+}
+
+.Sectiune {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 3.75rem;
+    margin-bottom: 2.5rem;
+    box-shadow: 0 0.65rem 2rem rgba(0, 0, 0, 0.1);
+    border-radius: 0.5rem;
+}
+
+.Sectiune-Titlu {
+    font-size: 2rem;
+    font-weight: 300;
+    margin-bottom: 1.875rem;
+    color: #333;
+    border-bottom: 0.125rem solid #d4b483;
+    padding-bottom: 0.95rem;
+}
+
+.Sectiune-Text {
+    line-height: 1.8;
+    margin-bottom: 1.563rem;
+    font-size: 1.1rem;
+    color: #555;
+}
+
+.Sectiune:nth-of-type(even) {
+    background: rgba(245, 245, 245, 0.9); 
+}
+
+.Poze {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(18.75rem, 1fr));
+    gap: 1.875rem;
+    margin-top: 2.5rem;
+}
+
+.Poze > figure {
+    position: relative;
+    overflow: hidden;
+    border-radius: 0.5rem;
+    box-shadow: 0 0.313rem 0.938rem rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.Poze figure:hover {
+    transform: translateY(-0.313rem);
+    box-shadow: 0 0.625rem 1.563rem rgba(0, 0, 0, 0.2);
+}
+
+.Loc-Poza {
+    width: 100%;
+    height: 15.625rem;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.Poze figure:hover .Loc-Poza {
+    transform: scale(1.05);
+}
+
+.Citat {
+    font-style: italic;
+    font-size: 1.3rem;
+    color: #666;
+    text-align: center;
+    margin: 2.5rem 0;
+    padding: 1.875rem;
+    border-left: 0.25rem solid #d4b483;
+    background: rgba(255, 255, 255, 0.7);
+    border-radius: 0.25rem;
+}
+
+.Lista-Creatie {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(21.875rem, 1fr));
+    gap: 1.875rem;
+    margin-top: 2.5rem;
+}
+
+.Creatia {
+    background: white;
+    padding: 1.875rem;
+    box-shadow: 0 0.35rem 0.95rem rgba(0, 0, 0, 0.1);
+    border-radius: 0.5rem;
+    border: 0.063rem solid #eee;
+    transition: transform 0.2s ease-out,
+                border-color 0.3s ease, 
+                box-shadow 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.Creatia:hover {
+    transform: translateY(-5px) scale(1.03);
+    border-color: #d4b483;
+    box-shadow: 0 1rem 2.5rem rgba(0, 0, 0, 0.18);
+}
+
+.Titlu-Creatie {
+    font-size: 1.4rem;
+    margin-bottom: 0.95rem;
+    color: #333;
+    font-weight: 400;
+}
+
+.An-Creatie {
+    color: #8a9b68;
+    font-weight: bold;
+    margin-bottom: 0.95rem;
+    font-size: 0.9rem;
+}
+
+.Creatia p {
+    line-height: 1.6;
+    color: #666;
+}
+
+
+footer {
+    text-align: center;
+    padding: 2.5rem 1.25rem;
+    margin-top: 3.75rem;
+    background: rgba(255, 255, 255, 0.9);
+}
+
+footer div {
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: center; 
+    align-items: flex-start; 
+    gap: 1rem; 
+}
+
+.Coloana-Stanga, .Coloana-Dreapta {
+    display: contents; 
+}
+
+.Submeniu {
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    gap: 0.5rem; 
+}
+
+.Submeniu-links {
+    display: flex;
+    gap: 0.5rem; 
+}
+
+.Inapoi {
+    padding: 0.75rem 1.875rem;
+    background: #8a9b68;
+    color: white;
+    text-decoration: none;
+    border-radius: 0.25rem;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+}
+
+.Inapoi:hover {
+    background: #7a8b58;
+    transform: translateY(-0.125rem);
+    box-shadow: 0 0.35rem 0.95rem rgba(138, 155, 104, 0.3);
+}
+
+.Inapoi-sub {
+    display: inline-block;
+    padding: 0.25rem 0.75rem;
+    font-size: 0.85rem;
+    color: #333;
+    background: rgba(255, 255, 255, 0.9);
+    border: 1px solid #ccc;
+    border-radius: 0.25rem;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.Inapoi-sub:hover {
+    background: #fff;
+    border-color: #8a9b68;
+    color: #8a9b68;
+    transform: translateY(-1px);
+}
+
+@media (max-width: 768px) {
+    header {
+        padding: 3.75rem 1.25rem 1.875rem;
+    }
+    
+    header h1 {
+        font-size: 2.5rem;
+        letter-spacing: 0.25rem;
+    }
+    
+    .Sectiune {
+        padding: 1.875rem;
+    }
+    
+    .Poze {
+        grid-template-columns: 1fr;
+        gap: 1.25rem;
+    }
+    
+    .Loc-Poza {
+        height: 12.5rem;
+    }
+    
+    .Lista-Creatie {
+        grid-template-columns: 1fr;
+    }
+    
+    .Sectiune-Titlu {
+        font-size: 1.6rem;
+    }
+
+    footer div {
+        flex-direction: column;
+        align-items: center;
+        gap: 1.5rem;
+    }
+
+    .Coloana-Stanga, .Coloana-Dreapta {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem; 
+    }
+
+    .Submeniu {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0.5rem;
+    }
+
+    #live-clock {
+        order: 999; 
+        margin-top: 1rem;
+        padding-top: 1rem;
+        border-top: 1px solid rgba(0,0,0,0.1);
+        width: 100%;
+        text-align: center;
+    }
+    
+    html.dark-mode #live-clock {
+        border-top: 1px solid rgba(255,255,255,0.1);
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.8rem;
+        margin-top: 1rem;
+    }
+    
+    header {
+        padding-top: 4rem;
+    }
+
+    header p {
+        font-size: 1rem;
+        letter-spacing: 0.125rem;
+    }
+    
+    .Sectiune {
+        padding: 1.25rem;
+    }
+    
+    .Citat {
+        font-size: 1.1rem;
+        padding: 1.25rem;
+    }
+
+    .theme-toggle, .logout-btn {
+        padding: 0.5rem 1rem;
+        font-size: 0.8rem;
+        top: 0.5rem;
+    }
+
+    .logout-btn {
+        max-width: 120px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        left: 0.5rem;
+    }
+
+    .theme-toggle {
+        right: 0.5rem;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .Poze figure,
+    .Loc-Poza,
+    .Creatia,
+    .Inapoi,
+    .Inapoi-sub,
+    header h1,
+    .theme-toggle,
+    .logout-btn {
+        transition: none;
+    }
+    
+    .Poze figure:hover {
+        transform: none;
+        box-shadow: 0 0.313rem 0.938rem rgba(0, 0, 0, 0.1); 
+    }
+    
+    .Poze figure:hover .Loc-Poza {
+        transform: none;
+    }
+    
+    .Creatia:hover {
+        transform: none;
+        box-shadow: 0 0.35rem 0.95rem rgba(0, 0, 0, 0.1); 
+    }
+    
+    .Inapoi:hover,
+    .Inapoi-sub:hover {
+        transform: none;
+        box-shadow: none; 
+    }
+}
+
+#comment-form div {
+    margin-bottom: 1rem;
+}
+#comment-form label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+#comment-form input[type="email"],
+#comment-form textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #ccc;
+    border-radius: 0.25rem;
+}
+#comment-form input[type="range"] {
+    width: 100%;
+}
+.comment-item {
+    border: 1px solid #ccc;
+    background: #fff;
+    padding: 1rem;
+    margin-top: 1rem;
+    border-radius: 0.25rem;
+}
+.comment-item span {
+    font-size: 0.9rem;
+    color: #777;
+    margin-left: 0.5rem;
+}
+.comment-item p {
+    margin-top: 0.5rem;
+}
+.comment-item button {
+    background: #a67f78;
+    color: white;
+    border: none;
+    padding: 0.25rem 0.5rem;
+    cursor: pointer;
+    border-radius: 0.25rem;
+    margin-top: 0.5rem;
+}
+
+html.dark-mode,
+html.dark-mode body {
+    background-color: #222 !important;
+    color: #eee !important;
+    min-height: 100vh;
+}
+
+html.dark-mode header,
+html.dark-mode .Sectiune,
+html.dark-mode .Sectiune:nth-of-type(even),
+html.dark-mode .Creatia,
+html.dark-mode footer,
+html.dark-mode .Inapoi-sub,
+html.dark-mode .Citat {
+    background: rgba(40, 40, 40, 0.9);
+    color: #eee;
+    box-shadow: 0 0.35rem 0.95rem rgba(0, 0, 0, 0.3);
+}
+
+html.dark-mode header h1,
+html.dark-mode .Sectiune-Titlu,
+html.dark-mode .Titlu-Creatie {
+    color: #eee;
+}
+
+html.dark-mode header p,
+html.dark-mode .Sectiune-Text,
+html.dark-mode .Citat,
+html.dark-mode .Creatia p {
+    color: #ccc;
+}
+
+html.dark-mode .Inapoi-sub:hover {
+    background: #555;
+    border-color: #8a9b68;
+    color: #8a9b68;
+}
+
+.theme-toggle {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    z-index: 100;
+}
+
+.logout-btn {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    z-index: 100;
+    background-color: #a67f78;
+}
+.logout-btn:hover {
+    background-color: #8f6a63;
+}
+
+#live-clock {
+    color: #777;
+    font-size: 1rem;
+}
+html.dark-mode #live-clock {
+    color: #aaa;
+}
+
+html.dark-mode .comment-item {
+    background: #2a2a2a;
+    border-color: #555;
+}
+html.dark-mode .comment-item span {
+    color: #aaa;
+}
+html.dark-mode #comment-form input,
+html.dark-mode #comment-form textarea {
+    background: #555;
+    border-color: #777;
+    color: #eee;
+}
+
+#comment-form input:read-only {
+    background-color: #eee;
+    cursor: not-allowed;
+    color: #777;
+}
+
+html.dark-mode #comment-form input:read-only {
+    background-color: #444;
+    color: #999;
+}
